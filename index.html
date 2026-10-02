@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff8ec">
+<title>Muhammad Rafi — Web developer untuk UMKM</title>
+<meta name="description" content="Muhammad Rafi membuat website dan aplikasi yang simpel, cepat, dan gampang dipakai untuk UMKM Indonesia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='13' cy='14' r='10' fill='%23ff6f59'/%3E%3Crect x='16' y='16' width='12' height='12' rx='3' fill='%232bb3a3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body data-page="home">
+
+<header class="wrap nav">
+  <a class="logo" href="#top">
+    <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="11" cy="12" r="9" fill="#ff6f59"/><rect x="13" y="13" width="11" height="11" rx="3" fill="#2bb3a3"/></svg>
+    Muhammad Rafi
+  </a>
+  <div class="nav-right">
+    <nav aria-label="Bagian halaman" data-i18n-aria="nav.label">
+      <ul>
+        <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+        <li><a href="#services" data-i18n="nav.services">Layanan</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Harga</a></li>
+        <li><a href="#showcase" data-i18n="nav.showcase">Show-off</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Bahasa" data-i18n-aria="lang.label">
+      <button type="button" data-lang="id" aria-pressed="true" lang="id">ID</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero" aria-labelledby="name">
+    <div>
+      <h1 id="name"><span>Muhammad</span><span>Rafi</span></h1>
+      <p class="tagline" data-i18n="hero.tagline">Web developer yang membantu UMKM naik kelas lewat website dan aplikasi yang simpel, cepat, dan gampang dipakai.</p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="#showcase" data-i18n="hero.cta.work">Lihat karya</a>
+        <a class="btn btn-butter" href="#contact" data-i18n="hero.cta.talk">Ngobrol dulu, yuk</a>
+      </div>
+      <p class="proof">
+        <span class="proof-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span data-i18n="hero.proof">Pernah bantu warung, kedai kopi, katering, sampai pengrajin batik.</span>
+      </p>
+    </div>
+
+    <!-- Hand-made shapes, no stock art. Outer <g> = parallax (main.js),
+         inner shape = its own float animation (CSS). -->
+    <svg class="art" viewBox="0 0 480 440" role="img" aria-label="Susunan lingkaran, balok, dan garis yang ceria" data-i18n-aria="hero.art">
+      <g data-depth="-0.06">
+        <circle class="float-a" cx="200" cy="200" r="150" fill="#ff6f59"/>
+      </g>
+      <g data-depth="0.08">
+        <path class="float-b" d="M300 60 a120 120 0 0 1 120 120 h-120 z" fill="#ffcf4a" stroke="#231f2e" stroke-width="5" stroke-linejoin="round"/>
+      </g>
+      <g data-depth="0.12">
+        <rect class="float-c" x="300" y="250" width="118" height="118" rx="22" fill="#2bb3a3" stroke="#231f2e" stroke-width="5"/>
+      </g>
+      <g data-depth="-0.1">
+        <polyline class="float-d" points="40,380 80,340 120,380 160,340 200,380 240,340" fill="none" stroke="#231f2e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g data-depth="0.04" fill="#231f2e">
+        <circle cx="60" cy="70" r="6"/><circle cx="90" cy="70" r="6"/><circle cx="120" cy="70" r="6"/>
+        <circle cx="60" cy="100" r="6"/><circle cx="90" cy="100" r="6"/><circle cx="120" cy="100" r="6"/>
+        <circle cx="60" cy="130" r="6"/><circle cx="90" cy="130" r="6"/><circle cx="120" cy="130" r="6"/>
+      </g>
+      <g data-depth="0.16">
+        <circle class="float-a" cx="420" cy="410" r="22" fill="none" stroke="#ff6f59" stroke-width="8"/>
+      </g>
+    </svg>
+  </section>
+
+  <!-- Who is behind it, right under the name: the user moved this up from
+       beside Kontak on 2026-10-02. -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 id="about-title" data-reveal><span data-i18n="about.title.a">Kenalan</span> <span class="sticker" data-i18n="about.title.b">dulu, yuk</span></h2>
+      <p data-reveal data-i18n="about.text">Halo, saya Rafi — lengkapnya M. Rafi Rifki Aldi. Saya membuat website dan aplikasi kecil, kebanyakan pakai PHP dan JavaScript biasa. Momen favorit saya adalah saat pemilik usaha bisa menjalankan semuanya sendiri, tanpa harus menelepon saya setiap hari. Di luar kerjaan, saya suka bikin roti, walaupun hasilnya belum tentu enak.</p>
+    </div>
+  </section>
+
+  <!-- Why a website at all: answered before the services, because many
+       UMKM owners are not yet sure they need one. -->
+  <section class="wrap benefits" id="benefits" aria-labelledby="benefits-title">
+    <div class="section-head" data-reveal>
+      <h2 id="benefits-title" data-i18n="benefits.title">Untung punya website!</h2>
+      <svg class="squiggle" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 12 C 14 2, 24 2, 34 12 S 54 22, 64 12 S 84 2, 94 12 S 110 20, 116 12"/></svg>
+    </div>
+    <p class="section-note" data-reveal data-i18n="benefits.lead">Tidak harus mahal atau ribet. Ini yang langsung terasa untuk usaha Anda:</p>
+
+    <ul class="benefit-list">
+      <li class="benefit" data-reveal>
+        <!-- a clock face with a small moon: open after hours -->
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="30" cy="34" r="22" fill="#fff8ec" stroke="#231f2e" stroke-width="3"/><path d="M30 20v14l9 6" fill="none" stroke="#231f2e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M52 4a9 9 0 1 0 8 13 7 7 0 0 1-8-13z" fill="#231f2e"/></svg>
+        <h3 data-i18n="benefits.1.title">Buka 24 jam</h3>
+        <p data-i18n="benefits.1.text">Pelanggan tetap bisa melihat produk, harga, dan jam buka Anda, walaupun toko sudah tutup.</p>
+      </li>
+      <li class="benefit benefit-butter" data-reveal>
+        <!-- a map pin beside a magnifier: easy to find -->
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 6a12 12 0 0 1 12 12c0 9-12 20-12 20S8 27 8 18A12 12 0 0 1 20 6z" fill="#ff6f59" stroke="#231f2e" stroke-width="3" stroke-linejoin="round"/><circle cx="20" cy="18" r="4" fill="#231f2e"/><circle cx="38" cy="38" r="14" fill="#fff8ec" stroke="#231f2e" stroke-width="3"/><path d="M48 48l10 10" stroke="#231f2e" stroke-width="5" stroke-linecap="round"/></svg>
+        <h3 data-i18n="benefits.2.title">Gampang ditemukan</h3>
+        <p data-i18n="benefits.2.text">Usaha Anda muncul saat orang mencari di Google atau Google Maps, bukan cuma lewat di linimasa media sosial.</p>
+      </li>
+      <li class="benefit benefit-teal" data-reveal>
+        <!-- a badge with a check: trust -->
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l22 8v16c0 15-10 26-22 32C20 54 10 43 10 28V12z" fill="#fff8ec" stroke="#231f2e" stroke-width="3" stroke-linejoin="round"/><path d="M22 32l7 7 14-15" fill="none" stroke="#231f2e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 data-i18n="benefits.3.title">Kelihatan lebih terpercaya</h3>
+        <p data-i18n="benefits.3.text">Punya alamat website sendiri membuat calon pembeli lebih yakin, apalagi yang belum pernah datang langsung.</p>
+      </li>
+      <li class="benefit benefit-ink" data-reveal>
+        <!-- a neat order slip next to a chat bubble: tidy orders -->
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="6" width="32" height="44" rx="6" fill="#fff8ec" stroke="#fff8ec" stroke-width="3"/><path d="M14 18h16M14 26h16M14 34h10" stroke="#231f2e" stroke-width="3" stroke-linecap="round"/><path d="M36 32h20a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H46l-8 7v-7h-2a4 4 0 0 1-4-4V36a4 4 0 0 1 4-4z" fill="#2bb3a3" stroke="#fff8ec" stroke-width="3" stroke-linejoin="round"/></svg>
+        <h3 data-i18n="benefits.4.title">Pesanan lebih rapi</h3>
+        <p data-i18n="benefits.4.text">Pesanan masuk lengkap dan jelas ke WhatsApp, tidak tercecer di antara ratusan chat.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="wrap services" id="services" aria-labelledby="services-title">
+    <!-- One offer panel: concrete deliverables, a time estimate and a direct
+         WhatsApp question per service, plus the promises that apply to all. -->
+    <div class="services-panel" data-reveal>
+      <div class="services-head">
+        <div>
+          <h2 id="services-title" data-i18n="services.title">Yang bisa saya bantu</h2>
+          <p class="services-lead" data-i18n="services.lead">Tiga layanan yang paling sering dibutuhkan UMKM. Semuanya saya kerjakan langsung, dari ngobrol pertama sampai website Anda jalan.</p>
+        </div>
+        <a class="btn btn-teal" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20konsultasi%20dulu%20soal%20kebutuhan%20usaha%20saya." data-i18n-wa="services.cta.wa" data-wa-text="Halo Rafi, saya mau konsultasi dulu soal kebutuhan usaha saya." target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><span data-i18n="services.cta">Konsultasi gratis</span></a>
+      </div>
+
+      <ul class="service-list">
+        <li class="service service-coral">
+          <div class="service-top">
+            <span class="service-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="8" width="48" height="44" rx="8" fill="#fff8ec" stroke="#231f2e" stroke-width="3"/><rect x="6" y="8" width="48" height="12" rx="6" fill="#ffcf4a" stroke="#231f2e" stroke-width="3"/><circle cx="50" cy="50" r="10" fill="#2bb3a3" stroke="#231f2e" stroke-width="3"/></svg></span>
+            <h3 data-i18n="services.1.title">Website usaha</h3>
+          </div>
+          <p class="service-text" data-i18n="services.1.text">Halaman yang rapi dan cepat, supaya pelanggan gampang menemukan usaha Anda dan langsung percaya.</p>
+          <p class="service-sub" data-i18n="services.includes">Yang Anda dapat</p>
+          <ul class="service-points">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.1.point.1">Tampil rapi di HP maupun komputer</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.1.point.2">Terhubung ke Google Maps dan WhatsApp</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.1.point.3">Halaman produk atau menu yang bisa Anda ubah sendiri</span></li>
+          </ul>
+          <div class="service-foot">
+            <span class="service-time"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0"/><path d="M12 6v6l4 2"/></svg><span data-i18n="services.1.time">Estimasi 1–2 minggu</span></span>
+            <a class="service-ask" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20tanya%20soal%20pembuatan%20website%20usaha." data-i18n-wa="services.1.wa" data-wa-text="Halo Rafi, saya mau tanya soal pembuatan website usaha." target="_blank" rel="noopener noreferrer"><span data-i18n="services.ask">Tanya soal ini</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+        </li>
+        <li class="service service-butter">
+          <div class="service-top">
+            <span class="service-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="6" width="20" height="20" rx="5" fill="#ff6f59" stroke="#231f2e" stroke-width="3"/><rect x="28" y="6" width="20" height="20" rx="5" fill="#fff8ec" stroke="#231f2e" stroke-width="3"/><rect x="4" y="30" width="20" height="20" rx="5" fill="#fff8ec" stroke="#231f2e" stroke-width="3"/><path d="M34 34h22a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H44l-8 6v-6h-2a4 4 0 0 1-4-4V38a4 4 0 0 1 4-4z" fill="#2bb3a3" stroke="#231f2e" stroke-width="3" stroke-linejoin="round"/></svg></span>
+            <h3 data-i18n="services.2.title">Katalog + pesan via WhatsApp</h3>
+          </div>
+          <p class="service-text" data-i18n="services.2.text">Pelanggan tinggal pilih produk, pesanannya langsung masuk ke WhatsApp Anda. Tanpa perlu pasang aplikasi tambahan.</p>
+          <p class="service-sub" data-i18n="services.includes">Yang Anda dapat</p>
+          <ul class="service-points">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.2.point.1">Katalog produk lengkap dengan foto dan harga</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.2.point.2">Keranjang belanja dengan total harga otomatis</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.2.point.3">Ringkasan pesanan yang rapi langsung ke WhatsApp</span></li>
+          </ul>
+          <div class="service-foot">
+            <span class="service-time"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0"/><path d="M12 6v6l4 2"/></svg><span data-i18n="services.2.time">Estimasi 2–3 minggu</span></span>
+            <a class="service-ask" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20tanya%20soal%20katalog%20online%20dengan%20pesan%20via%20WhatsApp." data-i18n-wa="services.2.wa" data-wa-text="Halo Rafi, saya mau tanya soal katalog online dengan pesan via WhatsApp." target="_blank" rel="noopener noreferrer"><span data-i18n="services.ask">Tanya soal ini</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+        </li>
+        <li class="service service-teal">
+          <div class="service-top">
+            <span class="service-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="36" width="12" height="20" rx="3" fill="#fff8ec" stroke="#231f2e" stroke-width="3"/><rect x="24" y="24" width="12" height="32" rx="3" fill="#ffcf4a" stroke="#231f2e" stroke-width="3"/><rect x="42" y="12" width="12" height="44" rx="3" fill="#ff6f59" stroke="#231f2e" stroke-width="3"/><circle cx="54" cy="10" r="7" fill="#231f2e"/></svg></span>
+            <h3 data-i18n="services.3.title">Aplikasi kasir &amp; stok</h3>
+          </div>
+          <p class="service-text" data-i18n="services.3.text">Catat penjualan dan stok dari HP, lengkap dengan pengingat sebelum barang habis.</p>
+          <p class="service-sub" data-i18n="services.includes">Yang Anda dapat</p>
+          <ul class="service-points">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.3.point.1">Catat penjualan dari HP atau tablet</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.3.point.2">Pengingat stok menipis lewat WhatsApp</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.3.point.3">Laporan penjualan harian dan bulanan</span></li>
+          </ul>
+          <div class="service-foot">
+            <span class="service-time"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0"/><path d="M12 6v6l4 2"/></svg><span data-i18n="services.3.time">Estimasi 3–5 minggu</span></span>
+            <a class="service-ask" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20tanya%20soal%20aplikasi%20kasir%20dan%20stok." data-i18n-wa="services.3.wa" data-wa-text="Halo Rafi, saya mau tanya soal aplikasi kasir dan stok." target="_blank" rel="noopener noreferrer"><span data-i18n="services.ask">Tanya soal ini</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="services-promise">
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.promise.1">Dibantu sampai online, termasuk domain dan hosting</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.promise.2">Bisa Anda ubah sendiri, ada panduan singkatnya</span></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="services.promise.3">Garansi perbaikan 30 hari setelah selesai</span></li>
+      </ul>
+    </div>
+  </section>
+  <!-- Prices are shown in full, on purpose: an UMKM visitor should not have to
+       ask what a package costs. The three cards are the website packages; the
+       two rows below are the open-ended ones (custom app, monthly care). -->
+  <section class="wrap pricing" id="pricing" aria-labelledby="pricing-title">
+    <div class="section-head" data-reveal>
+      <h2 id="pricing-title" data-i18n="pricing.title">Berapa biayanya?</h2>
+      <svg class="squiggle" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 12 C 14 2, 24 2, 34 12 S 54 22, 64 12 S 84 2, 94 12 S 110 20, 116 12"/></svg>
+    </div>
+    <p class="section-note" data-reveal data-i18n="pricing.note">Harganya saya buka dari awal, supaya Anda bisa hitung dulu sebelum menghubungi saya.</p>
+
+    <ul class="price-grid" data-reveal>
+      <li class="price">
+        <span class="price-tag" data-i18n="pricing.1.tag">1 halaman</span>
+        <h3 data-i18n="pricing.1.title">Landing page</h3>
+        <p class="price-amount"><span data-i18n="pricing.1.price">Rp 150.000</span><span class="price-unit" data-i18n="pricing.once">sekali bayar</span></p>
+        <p class="price-text" data-i18n="pricing.1.text">Satu halaman untuk memperkenalkan usaha Anda: profil singkat, layanan, dan cara menghubungi.</p>
+        <ul class="price-points">
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.1.point.1">Satu halaman, langsung ke intinya</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.1.point.2">Free domain &amp; hosting 1 bulan</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.1.point.3">Pilihan domain .my.id</span></li>
+        </ul>
+        <p class="price-excl" data-i18n="pricing.excl">Nama domain lain kena biaya tambahan</p>
+        <a class="btn btn-small" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20tertarik%20dengan%20paket%20landing%20page%20150%20ribu." data-i18n-wa="pricing.1.wa" data-wa-text="Halo Rafi, saya tertarik dengan paket landing page 150 ribu." target="_blank" rel="noopener noreferrer"><span data-i18n="pricing.choose">Pilih paket ini</span></a>
+      </li>
+      <li class="price price-butter">
+        <span class="price-tag" data-i18n="pricing.2.tag">Maks 5 halaman</span>
+        <h3 data-i18n="pricing.2.title">Company profile</h3>
+        <p class="price-amount"><span data-i18n="pricing.2.price">Rp 250.000</span><span class="price-unit" data-i18n="pricing.once">sekali bayar</span></p>
+        <p class="price-text" data-i18n="pricing.2.text">Profil usaha yang lebih lengkap. Isinya tetap, jadi perubahan konten lewat saya.</p>
+        <ul class="price-points">
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.2.point.1">Maksimal bisa sampai 5 halaman!</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.2.point.2">Free domain &amp; hosting 1 bulan</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.2.point.3">Pilihan domain .my.id</span></li>
+        </ul>
+        <p class="price-excl" data-i18n="pricing.excl">Nama domain lain kena biaya tambahan</p>
+        <a class="btn btn-small btn-butter" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20tertarik%20dengan%20paket%20company%20profile%20250%20ribu." data-i18n-wa="pricing.2.wa" data-wa-text="Halo Rafi, saya tertarik dengan paket company profile 250 ribu." target="_blank" rel="noopener noreferrer"><span data-i18n="pricing.choose">Pilih paket ini</span></a>
+      </li>
+      <li class="price price-teal">
+        <span class="price-tag" data-i18n="pricing.3.tag">Halaman bebas + admin</span>
+        <h3 data-i18n="pricing.3.title">Company profile + blog</h3>
+        <p class="price-amount"><span data-i18n="pricing.3.price">Rp 500.000</span><span class="price-unit" data-i18n="pricing.once">sekali bayar</span></p>
+        <p class="price-text" data-i18n="pricing.3.text">Sama seperti paket company profile, plus halaman admin supaya Anda bisa menulis artikel atau berita sendiri.</p>
+        <ul class="price-points">
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.3.point.1">Maksimal halaman bebas!</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.3.point.2">Free domain &amp; hosting 1 bulan</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pricing.3.point.3">Pilihan domain .my.id</span></li>
+        </ul>
+        <p class="price-excl" data-i18n="pricing.excl">Nama domain lain kena biaya tambahan</p>
+        <a class="btn btn-small btn-teal" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20tertarik%20dengan%20paket%20company%20profile%20%2B%20blog%20500%20ribu." data-i18n-wa="pricing.3.wa" data-wa-text="Halo Rafi, saya tertarik dengan paket company profile + blog 500 ribu." target="_blank" rel="noopener noreferrer"><span data-i18n="pricing.choose">Pilih paket ini</span></a>
+      </li>
+    </ul>
+
+    <ul class="price-extras" data-reveal>
+      <li class="price-extra price-extra-ink">
+        <div>
+          <h3 data-i18n="pricing.custom.title">Aplikasi web custom</h3>
+          <p class="price-amount"><span data-i18n="pricing.custom.price">Mulai Rp 5 juta</span></p>
+          <p class="price-text" data-i18n="pricing.custom.text">Dibuat mengikuti cara kerja usaha Anda. Harga akhirnya tergantung fitur, jadi kita ngobrol dulu.</p>
+        </div>
+        <a class="btn btn-small btn-butter" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20tanya%20soal%20aplikasi%20web%20custom%20untuk%20usaha%20saya." data-i18n-wa="pricing.custom.wa" data-wa-text="Halo Rafi, saya mau tanya soal aplikasi web custom untuk usaha saya." target="_blank" rel="noopener noreferrer"><span data-i18n="pricing.custom.cta">Ceritakan kebutuhan</span></a>
+      </li>
+      <li class="price-extra price-extra-butter">
+        <div>
+          <h3 data-i18n="pricing.care.title">Maintenance</h3>
+          <p class="price-amount"><span data-i18n="pricing.care.price">Rp 125.000</span><span class="price-unit" data-i18n="pricing.care.unit">per bulan</span></p>
+          <p class="price-text" data-i18n="pricing.care.text">Paket bulanan supaya website tetap jalan: update, backup, dan perbaikan kecil.</p>
+        </div>
+        <a class="btn btn-small btn-outline" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20tanya%20soal%20paket%20maintenance%20bulanan." data-i18n-wa="pricing.care.wa" data-wa-text="Halo Rafi, saya mau tanya soal paket maintenance bulanan." target="_blank" rel="noopener noreferrer"><span data-i18n="pricing.care.cta">Tanya maintenance</span></a>
+      </li>
+    </ul>
+
+    <p class="price-foot" data-reveal data-i18n="pricing.foot">Setiap paket website sudah termasuk domain .my.id dan hosting untuk bulan pertama. Nama domain lain, dan perpanjangan setelah bulan pertama, dihitung terpisah.</p>
+  </section>
+
+  <!-- Show-off project: three category cards, each linking to its own page
+       (company-profile.html and friends). Those pages share this CSS and JS. -->
+  <section class="wrap showcase" id="showcase" aria-labelledby="showcase-title">
+    <div class="section-head" data-reveal>
+      <h2 id="showcase-title" data-i18n="showcase.title">Show-off project</h2>
+      <svg class="squiggle" viewBox="0 0 120 24" aria-hidden="true"><path d="M4 12 C 14 2, 24 2, 34 12 S 54 22, 64 12 S 84 2, 94 12 S 110 20, 116 12"/></svg>
+    </div>
+    <p class="section-note" data-reveal data-i18n="showcase.hint">Dikelompokkan jadi tiga jenis pekerjaan. Pilih salah satu untuk melihat daftar proyeknya.</p>
+
+    <ul class="categories">
+      <li class="category category-coral" data-reveal>
+        <span class="category-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect x="10" y="12" width="44" height="40" rx="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><rect x="10" y="12" width="44" height="10" rx="5" fill="var(--coral)" stroke="var(--ink)" stroke-width="3"/><path d="M18 32h18M18 40h26" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/></svg>
+        </span>
+        <h3><a class="category-open" href="company-profile.html" data-category="company-profile" data-i18n="showcase.1.name">Company profile</a></h3>
+        <p data-i18n="showcase.1.blurb">Website profil usaha: siapa Anda, apa yang dikerjakan, dan cara menghubungi.</p>
+        <span class="category-meta">
+          <strong data-count-for="company-profile">0</strong>
+          <span data-i18n="showcase.count">proyek</span>
+        </span>
+        <span class="category-go" aria-hidden="true">
+          <span data-i18n="showcase.open">Lihat daftarnya</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+        </span>
+      </li>
+      <li class="category category-butter" data-reveal>
+        <span class="category-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M8 20h48v32a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><path d="M8 20h48v10H8z" fill="var(--butter)" stroke="var(--ink)" stroke-width="3"/><path d="M20 8v12M44 8v12" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="42" r="6" fill="var(--teal)" stroke="var(--ink)" stroke-width="3"/></svg>
+        </span>
+        <h3><a class="category-open" href="event-organizer.html" data-category="event-organizer" data-i18n="showcase.2.name">Event Organizer</a></h3>
+        <p data-i18n="showcase.2.blurb">Halaman acara: rundown, lokasi, dan pendaftaran peserta dalam satu tempat.</p>
+        <span class="category-meta">
+          <strong data-count-for="event-organizer">0</strong>
+          <span data-i18n="showcase.count">proyek</span>
+        </span>
+        <span class="category-go" aria-hidden="true">
+          <span data-i18n="showcase.open">Lihat daftarnya</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+        </span>
+      </li>
+      <li class="category category-teal" data-reveal>
+        <span class="category-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><rect x="8" y="10" width="48" height="36" rx="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="3"/><path d="M20 54h24" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><path d="M26 22l-8 6 8 6M38 22l8 6-8 6" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3><a class="category-open" href="web-app.html" data-category="web-app" data-i18n="showcase.3.name">Web app</a></h3>
+        <p data-i18n="showcase.3.blurb">Sistem yang menjalankan usaha sehari-hari: ERP pabrik, sekolah, klinik, absensi, kasir, sampai task management.</p>
+        <span class="category-meta">
+          <strong data-count-for="web-app">0</strong>
+          <span data-i18n="showcase.count">proyek</span>
+        </span>
+        <span class="category-go" aria-hidden="true">
+          <span data-i18n="showcase.open">Lihat daftarnya</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title" data-reveal data-i18n="contact.title">Yuk, ngobrol</h2>
+      <p data-reveal data-i18n="contact.text">Punya usaha yang butuh website atau aplikasi kecil? Ceritakan saja, konsultasi pertama gratis.</p>
+      <ul class="buttons" data-reveal>
+        <!-- <li>
+          <a class="btn btn-teal" href="https://wa.me/6281200000000?text=Halo%20Rafi%2C%20saya%20mau%20tanya%20soal%20website%20untuk%20usaha%20saya." data-i18n-wa="contact.wa.msg" data-wa-text="Halo Rafi, saya mau tanya soal website untuk usaha saya." target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><span data-i18n="contact.wa">Chat WhatsApp</span>
+          </a>
+        </li> -->
+        <li>
+          <a class="btn" href="mailto:hello@mrafirafi36@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><span data-i18n="contact.email">Kirim email</span>
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-butter" href="https://github.com/RafiR45" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub
+          </a>
+        </li>
+        <!-- <li>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/muhammadrafi" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="footer.left">&copy; 2026 Muhammad Rafi</span>
+    <span data-i18n="footer.right">Bentuk-bentuknya digambar sendiri pakai SVG dan CSS.</span>
+  </div>
+</footer>
+
+
+</body>
+</html>

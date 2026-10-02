@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff8ec">
+<title>Company profile — Muhammad Rafi</title>
+<meta name="description" content="Website profil usaha: siapa Anda, apa yang dikerjakan, dan cara menghubungi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='13' cy='14' r='10' fill='%23ff6f59'/%3E%3Crect x='16' y='16' width='12' height='12' rx='3' fill='%232bb3a3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<!-- The same two files the landing page loads, so they come from the cache. -->
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body data-page="category" data-category="company-profile">
+
+<header class="wrap nav">
+  <a class="logo" href="index.html">
+    <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="11" cy="12" r="9" fill="#ff6f59"/><rect x="13" y="13" width="11" height="11" rx="3" fill="#2bb3a3"/></svg>
+    Muhammad Rafi
+  </a>
+  <div class="nav-right">
+    <nav aria-label="Bagian halaman" data-i18n-aria="nav.label">
+      <ul>
+        <li><a href="index.html#about" data-i18n="nav.about">Tentang</a></li>
+        <li><a href="index.html#services" data-i18n="nav.services">Layanan</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing">Harga</a></li>
+        <li><a href="index.html#showcase" data-i18n="nav.showcase">Show-off</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Bahasa" data-i18n-aria="lang.label">
+      <button type="button" data-lang="id" aria-pressed="true" lang="id">ID</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Only the total and the cards are built by main.js, from SHOWCASE. -->
+  <section class="wrap category-page" aria-labelledby="categoryTitle">
+    <a class="back-btn" href="index.html#showcase">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      <span data-i18n="category.back">Kembali</span>
+    </a>
+
+    <p class="category-kicker" data-i18n="category.kicker">Show-off project</p>
+    <h1 id="categoryTitle" data-i18n="showcase.1.name">Company profile</h1>
+    <p class="category-lead" data-i18n="showcase.1.blurb">Website profil usaha: siapa Anda, apa yang dikerjakan, dan cara menghubungi.</p>
+    <p class="category-total" id="categoryTotal"></p>
+
+    <ul class="projects" id="categoryGrid"></ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="footer.left">&copy; 2026 Muhammad Rafi</span>
+    <span data-i18n="footer.right">Bentuk-bentuknya digambar sendiri pakai SVG dan CSS.</span>
+  </div>
+</footer>
+
+</body>
+</html>
