@@ -584,11 +584,11 @@
         },
         {
           accent: 'teal', year: '', tags: [], code: null,
-          live: 'https://sukastudio.com',
-          image: 'img/company-profile/sukastudio.com.png',
+          live: 'https://sukastudio.id',
+          image: 'img/company-profile/sukastudio.id.png',
           id: {
-            name: 'Suka Studio', client: 'Pelatihan public speaking', duration: '',
-            summary: 'Penyelenggara pelatihan public speaking dan komunikasi untuk anak, dengan program yang dibagi per kelompok umur.',
+            name: 'Suka Studio', client: 'Studio desain & animasi', duration: '',
+            summary: 'Studio desain dan animasi yang menuangkan cerita sebuah merek lewat karya yang berani, lengkap dengan halaman karya, karier, dan lini produk DOSE-nya.',
             team: [
               { name: 'Suka Studio Team', role: 'UI/UX Designer' },
               { name: 'M. Rafi Rifki Aldi', role: 'Frontend Web Developer' },
@@ -599,8 +599,8 @@
             problem: '', solution: '', features: [], result: ''
           },
           en: {
-            name: 'Suka Studio', client: 'Public speaking training', duration: '',
-            summary: 'Public speaking and communication training for children, with programmes split by age group.',
+            name: 'Suka Studio', client: 'Design & animation studio', duration: '',
+            summary: 'A design and animation studio that tells each brand\'s story through bold work, with sections for its portfolio, careers and its own DOSE product line.',
             team: [
               { name: 'Suka Studio Team', role: 'UI/UX Designer' },
               { name: 'M. Rafi Rifki Aldi', role: 'Frontend Web Developer' },
