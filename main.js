@@ -22,9 +22,10 @@
 
   var LANG_KEY = 'rafi-lang';
 
-  // WhatsApp links carry a prefilled message in the page language. The HTML
-  // holds the Indonesian one (data-wa-text) so the links work without JS.
-  var WA_BASE = 'https://wa.me/6281200000000?text=';
+  // Every call to action opens an email with its subject already filled in, in
+  // the page language. The HTML holds the Indonesian subject (data-mail-text)
+  // so the links still work without JS.
+  var MAIL_BASE = 'mailto:mrafirafi36@gmail.com?subject=';
 
   // English for everything marked [data-i18n] / [data-i18n-aria] in the HTML.
   var EN = {
@@ -57,7 +58,7 @@
     'services.title': 'How I can help',
     'services.lead': 'The three services small businesses ask for most. I do all of it myself, from our first chat until your site is live.',
     'services.cta': 'Free consultation',
-    'services.cta.wa': "Hi Rafi, I'd like a quick consultation about what my business needs.",
+    'services.cta.mail': 'Free consultation about my website needs',
     'services.includes': 'What you get',
     'services.ask': 'Ask about this',
     'services.1.title': 'Business website',
@@ -66,21 +67,21 @@
     'services.1.point.2': 'Linked to Google Maps and WhatsApp',
     'services.1.point.3': 'Product or menu pages you can edit yourself',
     'services.1.time': 'About 1–2 weeks',
-    'services.1.wa': "Hi Rafi, I'd like to ask about a business website.",
+    'services.1.mail': 'Question about a business website',
     'services.2.title': 'Catalogue + WhatsApp orders',
     'services.2.text': 'Customers pick products and the order lands in your WhatsApp. No extra app to install.',
     'services.2.point.1': 'A product catalogue with photos and prices',
     'services.2.point.2': 'A cart that adds up the total for you',
     'services.2.point.3': 'Tidy order summaries straight to WhatsApp',
     'services.2.time': 'About 2–3 weeks',
-    'services.2.wa': "Hi Rafi, I'd like to ask about an online catalogue with WhatsApp orders.",
+    'services.2.mail': 'Question about an online catalogue with WhatsApp orders',
     'services.3.title': 'Point of sale & stock app',
     'services.3.text': 'Record sales and stock from your phone, with a reminder before anything runs out.',
     'services.3.point.1': 'Record sales from a phone or tablet',
     'services.3.point.2': 'Low-stock reminders on WhatsApp',
     'services.3.point.3': 'Daily and monthly sales reports',
     'services.3.time': 'About 3–5 weeks',
-    'services.3.wa': "Hi Rafi, I'd like to ask about a point of sale and stock app.",
+    'services.3.mail': 'Question about a point of sale and stock app',
     'services.promise.1': 'Helped all the way to live, domain and hosting included',
     'services.promise.2': 'You can edit it yourself, with a short guide',
     'services.promise.3': '30-day fix guarantee after launch',
@@ -96,7 +97,7 @@
     'pricing.1.point.1': 'One page, straight to the point',
     'pricing.1.point.2': 'Free domain & hosting for the first month',
     'pricing.1.point.3': 'A .my.id domain of your choice',
-    'pricing.1.wa': "Hi Rafi, I'm interested in the landing page package.",
+    'pricing.1.mail': 'Interested in the landing page package',
     'pricing.2.tag': 'Up to 5 pages',
     'pricing.2.title': 'Company profile',
     'pricing.2.price': 'Rp 250,000',
@@ -104,7 +105,7 @@
     'pricing.2.point.1': 'Up to 5 pages!',
     'pricing.2.point.2': 'Free domain & hosting for the first month',
     'pricing.2.point.3': 'A .my.id domain of your choice',
-    'pricing.2.wa': "Hi Rafi, I'm interested in the company profile package.",
+    'pricing.2.mail': 'Interested in the company profile package',
     'pricing.3.tag': 'Unlimited pages + admin',
     'pricing.3.title': 'Company profile + blog',
     'pricing.3.price': 'Rp 500,000',
@@ -112,18 +113,18 @@
     'pricing.3.point.1': 'As many pages as you need!',
     'pricing.3.point.2': 'Free domain & hosting for the first month',
     'pricing.3.point.3': 'A .my.id domain of your choice',
-    'pricing.3.wa': "Hi Rafi, I'm interested in the company profile + blog package.",
+    'pricing.3.mail': 'Interested in the company profile + blog package',
     'pricing.custom.title': 'Custom web app',
     'pricing.custom.price': 'From Rp 5 million',
     'pricing.custom.text': 'Built around the way your business works. The final price depends on the features, so we talk it through first.',
     'pricing.custom.cta': 'Tell me what you need',
-    'pricing.custom.wa': "Hi Rafi, I'd like to ask about a custom web app for my business.",
+    'pricing.custom.mail': 'Question about a custom web app',
     'pricing.care.title': 'Maintenance',
     'pricing.care.price': 'Rp 125,000',
     'pricing.care.unit': 'per month',
     'pricing.care.text': 'A monthly package that keeps the site running: updates, backups and small fixes.',
     'pricing.care.cta': 'Ask about maintenance',
-    'pricing.care.wa': "Hi Rafi, I'd like to ask about the monthly maintenance package.",
+    'pricing.care.mail': 'Question about the monthly maintenance package',
     'pricing.foot': 'Every website package includes a .my.id domain and hosting for the first month. Another domain name, and renewals after that month, are counted separately.',
     'nav.showcase': 'Showcase',
     'showcase.title': 'Show-off project',
@@ -140,8 +141,6 @@
     'category.kicker': 'Show-off project',
     'contact.title': "Let's talk",
     'contact.text': 'Have a business that needs a website or a small app? Tell me about it; the first chat is free.',
-    'contact.wa': 'Chat on WhatsApp',
-    'contact.wa.msg': "Hi Rafi, I'd like to ask about a website for my business.",
     'contact.email': 'Send an email',
     'webapp.note': "The systems below run inside their clients' own operations. Their data is confidential, so there are no screenshots and no public demo here — what I can tell you is what each system does.",
     'footer.left': '© 2026 Muhammad Rafi',
@@ -1301,7 +1300,7 @@
   function captureIndonesian() {
     each('[data-i18n]', function (node) { ID[node.getAttribute('data-i18n')] = node.textContent; });
     each('[data-i18n-aria]', function (node) { ID[node.getAttribute('data-i18n-aria')] = node.getAttribute('aria-label'); });
-    each('[data-i18n-wa]', function (node) { ID[node.getAttribute('data-i18n-wa')] = node.getAttribute('data-wa-text'); });
+    each('[data-i18n-mail]', function (node) { ID[node.getAttribute('data-i18n-mail')] = node.getAttribute('data-mail-text'); });
     ID['meta.title'] = document.title;
     ID['meta.desc'] = metaDesc ? metaDesc.getAttribute('content') : '';
   }
@@ -1319,8 +1318,8 @@
     root.setAttribute('lang', lang);
     each('[data-i18n]', function (node) { node.textContent = t(node.getAttribute('data-i18n')); });
     each('[data-i18n-aria]', function (node) { node.setAttribute('aria-label', t(node.getAttribute('data-i18n-aria'))); });
-    each('[data-i18n-wa]', function (node) {
-      node.setAttribute('href', WA_BASE + encodeURIComponent(t(node.getAttribute('data-i18n-wa'))));
+    each('[data-i18n-mail]', function (node) {
+      node.setAttribute('href', MAIL_BASE + encodeURIComponent(t(node.getAttribute('data-i18n-mail'))));
     });
     if (activeCategory) {
       // A category page names itself; the shared meta.* keys describe the
